@@ -82,6 +82,9 @@ if (isset($_FILES['upl']) && $_FILES['upl']['error'] == 0) {
     $video->setDuration($duration);
     $video->setType($type);
 
+    if (!empty($_REQUEST['created'])) {
+        $video->setCreated($_REQUEST['created']):
+    }
     if (!empty($_REQUEST['title'])) {
         $video->setTitle($_REQUEST['title']);
     }
